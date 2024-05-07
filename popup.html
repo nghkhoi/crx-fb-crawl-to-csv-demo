@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            min-width: 300px;
+            padding: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+
+        }
+
+        .title {
+            margin: 5px 0;
+        }
+
+        .btn {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .button {
+            border: 1px solid rgb(197, 197, 197);
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all;
+        }
+
+        #list-tags {
+            width: 100%;
+            max-height: 300px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+
+        .button:hover {
+            background-color: rgb(211, 211, 211);
+        }
+
+        .disable {
+            pointer-events: none;
+            cursor: no-drop;
+            background-color: rgb(157, 157, 157);
+        }
+
+        .save {
+            pointer-events: visible;
+            cursor: pointer;
+            color: white;
+            background-color: #438bff;
+        }
+
+        .save:hover {
+            background-color: #0062ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">List tags</h1>
+        <div id="list-tags"></div>
+        <div class="btn" id="btn">
+            <a id="button" class="button">Get Data</a>
+            <a id="save-file" class="disable button">Save file</a>
+            <a id="save-sheet" class="disable button">Save GGSheet</a>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

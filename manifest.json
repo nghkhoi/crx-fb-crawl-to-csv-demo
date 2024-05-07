@@ -8,9 +8,24 @@
         "type": "module"
     },
     "action": {
-        "default_popup": "index.html"
+        "default_popup": "popup.html"
     },
-    "permissions": ["scripting"],
-    "optional_host_permissions": ["<all_urls>"],
-    "host_permissions": ["*://*/*"]
+    "permissions": ["scripting", "identity", "activeTab", "storage"],
+    "oauth2": {
+        "client_id": "INSERT_CLIENT_ID_HERE",
+        "scopes": [
+            "https://www.googleapis.com/auth/drive",
+            "https://www.googleapis.com/auth/userinfo.email",
+            "https://www.googleapis.com/auth/spreadsheets",
+            "https://www.googleapis.com/auth/drive.readonly",
+            "https://www.googleapis.com/auth/drive.file",
+            "https://www.googleapis.com/auth/userinfo.email"
+        ]
+    },
+    "key": "INSERT_KEY_HERE",
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*",
+        "https://docs.google.com/spreadsheets/*"
+    ]
 }
